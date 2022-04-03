@@ -1,0 +1,28 @@
+{
+  "root": "apps/amuvee-e2e",
+  "sourceRoot": "apps/amuvee-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/amuvee-e2e/cypress.json",
+        "devServerTarget": "amuvee:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "amuvee:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/amuvee-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["amuvee"]
+}

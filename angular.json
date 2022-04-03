@@ -1,0 +1,9 @@
+{
+  "version": 2,
+  "projects": {
+    "amuvee": "apps/amuvee",
+    "amuvee-e2e": "apps/amuvee-e2e",
+    "api": "apps/api",
+    "api-interfaces": "libs/api-interfaces"
+  }
+}
